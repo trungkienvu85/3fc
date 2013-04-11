@@ -1,0 +1,152 @@
+<!doctype html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Edit profile</title>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.3.0.min.css" />
+        <script src="../js/jquery-1.9.1.min.js"></script>
+        <script src="../js/jquery.mobile-1.3.0.min.js"></script>
+    </head>
+    <body>
+        <div id="page" data-role="page">
+            <div id="header" data-role="header" data-theme="">
+                <div id="header_top">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="left_top" style="width: 20%;"><a href="#nav-panel" data-theme="" data-icon=""><span style='display:block;height:0;overflow:hidden;position:absolute;width:0'>Click</span></a></td>
+                                <td class="center_top" style="width: 60%;text-align: center;"><h3 class="logo_text">Edit Profile</h3></td>
+                                <td class="right_top" style="width: 20%;"><a href="#" data-theme="" data-icon="" id="btn-save" ></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="container" data-role="content" data-theme="">
+
+                <div class="support_step">
+                    <form id="form_search_stu" action method="post" class="edit-from" style="background: #fff;">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <label class="step2_lb">First name</label>
+                                    <input class="ip_form" type="text" data-role="none" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="step2_lb">Middle name</label>
+                                    <input class="ip_form" type="text" data-role="none" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="step2_lb">Last name</label>
+                                    <input class="ip_form" type="text" data-role="none" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0;">
+                                    <table class="nest-tb" style="width: 100%;">
+                                        <tr>
+                                            <td style="width: 50%;">
+                                                <label class="step2_lb">Email</label>
+                                                <input class="ip_form" type="text" data-role="none" />
+                                            </td>
+                                            <td style="width: 50%;">
+                                                <label class="step2_lb">Confirm email</label>
+                                                <input class="ip_form" type="text" data-role="none" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="position: relative;">
+                                        <label>Secrets questions</label>
+                                        <select data-role="none" style="width: 100%;padding: 2px; border: 1px solid #ddd; color: #8c8c8c;">
+                                            <option value="">Select your age</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                        </select>
+                                        <span id="arrow"></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Secret answer</label>
+                                    <input class="ip_form" type="text" data-role="none" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Are you student from</label>
+                                    <table style="width: 100%;" class="nest-tb-2">
+                                        <tr>
+                                            <td><div style="position: relative;"><input class="hidden choose-from" checked="checked" type="radio" name="from" /><label style="color: #8c8c8c;">Within Australia</label><span id="r1" class="radio-btn checked"></span></div></td>
+                                            <td><div style="position: relative;"><input class="hidden choose-from" type="radio" name="from" /> <label style="color: #8c8c8c;">Outside Australia</label><span id="r2" class="radio-btn uncheck"></span></div></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+            <div data-role="panel" data-position-fixed="false" id="nav-panel">
+                <div class="info">
+                    <div class="name">
+                        <img src="../images/default.png" />
+                        <p>
+                            <span class="name">Do Dang Thanh</span><br />
+                            <span>BCV</span>
+                            <span>Year 12</span>
+                        </p>
+                    </div>
+                    <p>
+                        <a class="player button" href="#"></a>
+                        <a class="supporter button" href="#"></a>
+                    </p>
+                </div>
+                <ul class="category">
+                    <li><a href="http://cuongit.byethost22.com/mobile/scoreboard.html" id="scoreboard">Scoreboard</a></li>
+                    <li><a href="#" id="verify">Verify Supporters</a></li>
+                    <li><a href="#" id="invite">Invite Supporter</a></li>
+                    <li><a href="#" id="play-again">Play Again</a></li>
+                    <li><a href="http://cuongit.byethost22.com/mobile/edit.html" id="edit-details">Edit Details</a></li>
+                    <li><a href="http://cuongit.byethost22.com/mobile/step1.html" id="support">Support A Player</a></li>
+                    <li><a href="#" id="logout">Log out</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+//                $('span.radio-btn').click(function() {
+//                    var id = $(this).attr('id');
+//                    if (id === 'r1') {
+//                        $(this).prev().prev().children('.ui-radio').children().attr('checked', 'checked');
+//                        $('#'+id).addClass('checked');
+//                        $('#'+id).removeClass('uncheck');
+//                        $('#r2').removeClass('checked');
+//                        $('#r2').addClass('uncheck');
+//                        $(this).prev().prev().children('.ui-radio').children().removeAttr('checked');
+//                    } else {
+//                        $(this).prev().prev().children('.ui-radio').children().attr('checked', 'checked');
+//                        $('#'+id).addClass('checked');
+//                        $('#'+id).removeClass('uncheck');
+//                        $('#r1').removeClass('checked');
+//                        $('#r1').addClass('uncheck');
+//                        $(this).prev().prev().children('.ui-radio').children().removeAttr('checked');
+//                    }
+//                });
+            });
+        </script>
+    </body>
+</html>

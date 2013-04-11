@@ -1,0 +1,174 @@
+.ui-body-c, .ui-overlay-c {
+    text-shadow: none !important;
+}
+.ui-panel-position-left {
+    background: none repeat scroll 0 0 #282828 !important;
+}
+div.name {
+    padding: 0 10px;
+}
+span.name {
+    color: #FFFFFF !important;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+}
+div.name p span {
+    color: #949494;
+}
+a.button {
+}
+a.player {
+    background: url("../images/player-dis.png") no-repeat scroll center center transparent;
+    display: inline-block;
+    height: 34px;
+    margin-left: 8px;
+    width: 120px;
+}
+a.supporter {
+    background: url("../images/supporter.png") repeat-x scroll center center transparent;
+    display: inline-block;
+    height: 34px;
+    width: 120px;
+}
+a.player:hover {
+    background: url("../images/player-ac.png") no-repeat scroll center center transparent;
+}
+a.supporter:hover {
+}
+ul.category {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+ul.category li {
+}
+ul.category li a {
+    color: #FFFFFF !important;
+    display: block;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 50px;
+    text-decoration: none;
+}
+div.name images {
+    float: left;
+    margin-right: 5px;
+    margin-top: 13px;
+}
+div.name p {
+    display: inline-block;
+    margin-top: 15px;
+    width: 75%;
+}
+.ui-panel-inner {
+    padding: 0 !important;
+}
+ul.category li a:hover {
+    background-color: #232323 !important;
+}
+a#scoreboard {
+    background: url("../images/scoreboard-icon.png") no-repeat scroll 10px center transparent;
+}
+a#verify {
+    background: url("../images/verify-icon.png") no-repeat scroll 10px center transparent;
+}
+a#invite {
+    background: url("../images/invite-icon.png") no-repeat scroll 10px center transparent;
+}
+a#play-again {
+    background: url("../images/playagain-icon.png") no-repeat scroll 10px center transparent;
+}
+a#edit-details {
+    background: url("../images/edit-icon.png") no-repeat scroll 10px center transparent;
+}
+a#support {
+    background: url("../images/supporter-icon.png") no-repeat scroll 10px center transparent;
+}
+a#logout {
+    background: url("../images/logout-icon.png") no-repeat scroll 10px center transparent;
+}
+#btn-save {
+    background: url("../images/btn_save.png") no-repeat scroll right center transparent;
+    display: inline-block;
+    height: 37px;
+    width: 100%;
+}
+#btn-forward {
+    background: url("../images/forward.png") no-repeat scroll right center transparent;
+    display: inline-block;
+    height: 42px;
+    width: 100%;
+}
+.edit-from {
+    height: 100%;
+}
+.edit-from input.ip_form {
+    color: #8C8C8C;
+    padding-left: 5px !important;
+}
+.edit-from label {
+    padding: 5px 0 !important;
+}
+.edit-from tr td {
+    padding: 0 2px;
+}
+.nest-tb tr td {
+    padding: 0;
+}
+span.checked, span.uncheck {
+    display: block;
+    height: 25px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 25px;
+}
+span.checked {
+    background: url("../images/radio-checked.png") no-repeat scroll center center transparent;
+}
+span.uncheck {
+    background: url("../images/radio-uncheck.png") no-repeat scroll center center transparent;
+}
+.hidden {
+    display: none;
+}
+.nest-tb-2 label {
+    margin-left: 30px;
+}
+span#arrow {
+    background: url("../images/arrow.png") no-repeat scroll right center transparent;
+    bottom: 3px;
+    height: 20px;
+    position: absolute;
+    right: 2px;
+    width: 22px;
+}
+.tb-top, .tb-bottom {
+    border-collapse: collapse;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+}
+.tb-top tr th {
+}
+.tb-top th td {
+}
+.tb-top tr {
+}
+.tb-top tr td {
+    
+}
+.tb-top tr td, .tb-top tr th {
+    border-bottom: 1px solid #ccc;
+}
+.tb-top tr td.opa span {
+    color: #ccc;
+}
+div.value {
+    background: url("../images/cycle.png") no-repeat scroll center center transparent;
+    display: block;
+    height: 115px;
+    line-height: 100px;
+}

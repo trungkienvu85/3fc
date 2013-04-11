@@ -1,0 +1,107 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Support a player</title>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.3.0.min.css" />
+        <script src="../js/jquery-1.9.1.min.js"></script>
+        <script src="../js/jquery.mobile-1.3.0.min.js"></script>
+        <script src="../js/pages/menu.js"></script>
+    </head>
+    <body>
+        <div id="page" data-role="page">
+            <div id="header" data-role="header" data-theme="">
+                <div id="header_top">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="left_top" style="width: 20%;"><a href="#nav-panel" data-theme="" data-icon=""><span style='display:block;height:0;overflow:hidden;position:absolute;width:0'>Click</span></a></td>
+                                <td class="center_top" style="width: 60%;text-align: center;"><h3 class="logo_text">Support a player</h3></td>
+                                <td class="right_top" style="width: 20%;"></td>
+                            </tr>
+                        </tbody>
+                    </table>				
+                </div>
+                <div id="header_bottom">
+                    <p style="float:left; margin: 0; color: #fff; line-height: 190%;">Do Dang Thanh</p>
+                    <p style="float:right; margin: 0; color: #fff; line-height: 190%;">24/02/2013</p>
+                </div>
+            </div>
+            <div id="container" data-role="content" data-theme="">
+                <div class="step_bar">
+                    <p>Step 2</p>&nbsp;<span>Your details</span>
+                </div>
+                <div class="proccess_bar" style="background: #ececec;height:7px;width: 100%;">
+                    <hr style="width: 40%;" />
+                </div>
+                <div style="padding: 0 10px;text-align: left;">
+                    <p style="margin: 5px 0;"><span><b>Support a Student</b></span></p>
+                    <p style="font-family: Arial;font-size: 10px;margin: 5px 0;text-align: justify;">
+                        <span style="display: block;">
+                            Before you can support a player we need to know a little about you.
+                            It is the policy of Three Fat Carrots that every supporter must be verified by the player before registration can be completed.
+                            Once you have been verified you will be invited to complete your support for the student.
+                        </span>
+                    </p>
+                </div>
+                <div class="support_step">
+                    <p>Enter your details below</p>
+                    <form id="form_search_stu" action method="post">
+                        <label class="step2_lb">First name:</label>
+                        <input class="ip_form" type="text" data-role="none" />
+                        <label class="step2_lb">Age</label>
+                        <select data-role="none" style="width: 100%;padding: 2px; border: 1px solid #ddd;">
+                            <option value="">Select your age</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                        </select>
+<!--                        <input class="ip_form" type="text" data-role="none" />-->
+                        <label class="step2_lb">Country you live in:</label>
+                        <div style="text-align: center;">
+                            <label class="r_ip" style="padding: 0">
+                                <input type="radio" name="r_ctry" data-role="none" />
+                                <span style="vertical-align: top; padding-top: 5px;display: inline-block">Within Australia</span>
+                            </label>
+                            <label class="r_ip" style="padding: 0">
+                                <input type="radio" name="r_ctry" data-role="none" />
+                                <span style="vertical-align: top; padding-top: 5px;display: inline-block">Outside Australia</span>
+                            </label>
+                        </div>
+                        <input class="step2_btn_from ip_form" type="submit" value="Preview" data-role="none"/>
+                        <input class="step2_btn_from ip_form" type="submit" value="Verify" data-role="none"/>
+                    </form>
+                </div>
+            </div>
+
+            <div data-role="panel" data-position-fixed="false" id="nav-panel">
+                <div class="info">
+                    <div class="name">
+                        <img src="../images/default.png" />
+                        <p>
+                            <span class="name">Do Dang Thanh</span><br />
+                            <span>BCV</span>
+                            <span>Year 12</span>
+                        </p>
+                    </div>
+                    <p>
+                        <a class="player button" href="#"></a>
+                        <a class="supporter button" href="#"></a>
+                    </p>
+                </div>
+                <ul class="category">
+                    <li><a href="" onclick="gotoScoreboard();" id="scoreboard">Scoreboard</a></li>
+                    <li><a href="#" onclick="goToEditUser();" id="verify">Verify Supporters</a></li>
+                    <li><a href="#" onclick="goToEditUser();" id="invite">Invite Supporter</a></li>
+                    <li><a href="#" onclick="gotoStep2();" id="play-again">Play Again</a></li>
+                    <li><a href="" onclick="goToEditUser();" id="edit-details">Edit Details</a></li>
+                    <li><a href="" onclick="gotoStep1();" id="support">Support A Player</a></li>>
+                    <li><a href="#" onclick="logout();" id="logout">Log out</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+    </body>
+</html>
