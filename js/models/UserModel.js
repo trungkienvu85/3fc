@@ -7,22 +7,33 @@
  */
 User.UserModel = function (config) {
 
-    this.id = config.id;
-    this.userName = config.userName;
-    this.firstName= config.firstName;
-    this.middleName= config.middleName;
-    this.lastName= config.lastName;
-    this.sex= config.sex;
-    this.age= config.age;
-    this.password = config.password;
-    this.secQuestionId= config.secQuestionId;
-    this.answer= config.answer;
-    this.userType= config.userType;
-    this.email= config.email;
-    this.lisGameId= config.lisGameId;
-    this.lisGameSupportedId= config.lisGameSupportedId;
-    this.listSupporter= config.listSupporter;
-
+    this.CountryId=config.CountryId,
+    this.CreatedBy=config.CreatedBy,
+    this.CreatedDate=config.CreatedDate,
+    this.FirstName= config.FirstName,
+    this.IsActive=config.IsActive,
+    this.IsAdmin=config.IsAdmin,
+    this.IsInAu=config.IsInAu,
+    this.LastName=config.LastName,
+    this.MiddleName=config.MiddleName,
+    this.Photo=config.Photo,
+    this.PostCode=config.PostCode,
+    this.RelationShip=config.RelationShip,
+    this.School=config.School,
+    this.SecretAnswer=config.SecretAnswer,
+    this.SecretQuestion=config.SecretQuestion,
+    this.StateCode=config.StateCode,
+    this.StudentType=config.StudentType,
+    this.SuburbLive=config.SuburbLive,
+    this.SuburbSchool=config.SuburbSchool,
+    this.UserAge=config.UserAge,
+    this.UserEmail=config.UserEmail,
+    this.UserId=config.UserId,
+    this.UserPassword=config.UserPassword,
+    this.UserSex=config.UserSex,
+    this.UserType=config.UserType,
+    this.YearIn=config.YearIn,
+    this.gameIds=config.gameIds
 }
 
 User.SupporterModel = function (config) {

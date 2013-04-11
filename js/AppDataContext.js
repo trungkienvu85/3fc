@@ -1,5 +1,5 @@
 var User = User || {};
-
+var Game = Game || {};
 
 
 require.config({

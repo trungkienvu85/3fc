@@ -1,0 +1,169 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Step2</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
+    <link rel="stylesheet" href="../css/jquery.mobile-1.3.0.min.css" />
+    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />-->
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/jquery.mobile-1.3.0.min.js"></script>
+    <script src="../js/pages/menu.js"></script>
+
+
+</head>
+<body>
+<div id="page" data-role="page">
+    <div  id="header" data-role="header" data-theme="">
+        <div id="header_top">
+            <table>
+                <tbody>
+                <tr>
+                    <td class="left_top" style="width: 20%;"><a href="#nav-panel" data-theme="" data-icon=""><span style='display:block;height:0;overflow:hidden;position:absolute;width:0'>Click</span></a></td>
+                    <td class="center_top" style="width: 60%;text-align: center;"><h3 class="logo_text">Support a player</h3></td>
+                    <td class="right_top" style="width: 20%;"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="header_bottom">
+            <p style="float:left; margin: 0; color: #fff; line-height: 190%;">Do Dang Thanh</p>
+            <p style="float:right; margin: 0; color: #fff; line-height: 190%;">24/02/2013</p>
+        </div>
+    </div>
+    <div id="container" data-role="content" data-theme="">
+        <div class="step_bar">
+            <p>Step 3</p>&nbsp;<span>Provide Inspiration</span>
+        </div>
+        <div class="proccess_bar" style="background: #ececec;height:7px;width: 100%;">
+            <hr style="width: 60%;" />
+        </div>
+        <div style="padding: 0 10px;text-align: left;">
+            <p style="margin: 5px 0;"><span><b>Choosing games</b></span></p>
+            <p style="font-family: Arial;font-size: 10px;margin: 5px 0;text-align: justify;">
+                        <span style="display: block;">
+                            Choose which of the games below you would like to support your student for.
+                            You an choose more than one if you wish to.
+                        </span>
+            </p>
+        </div>
+        <div class="support_step">
+            <div style="background: #f47321; text-shadow: none;text-align: center;">
+                <p style="font-size:15px;text-transform: inherit;padding: 10px 5px;">Your player's three individual reward ranges:</p>
+                <table width="100%" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <td style="border-top: 1px solid #fff;border-bottom: 1px solid #fff;" width="33%">
+                            <div class="carrot_div"><span>one carrot<br />18-16</span></div>
+                            <div class="cash"><span>Cash reward</span><strong>$200</strong></div>
+                        </td>
+                        <td style="border: 1px solid #fff;" width="33%">
+                            <div class="carrot_div"><span>two carrots<br />15-12</span></div>
+                            <div class="cash"><span>Cash reward</span><strong>$100</strong></div>
+                        </td>
+                        <td style="border-top: 1px solid #fff;border-bottom: 1px solid #fff;" width="33%">
+                            <div class="carrot_div"><span>three carrots<br />11-10</span></div>
+                            <div class="cash"><span>Cash reward</span><strong>$50</strong></div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p style="text-transform: inherit;text-align: justify;">How you choose to reward your student for their efforts is up to you. You have five options within each of the three reward ranges.</p>
+            </div>
+            <div >
+                <form action method="post" style="padding: 5px;" id="form_s3">
+                    <a class="sl_carrot" href="#pop_sl1_cr" data-rel="popup">one carrot</a>
+                    <div data-role="popup" id="pop_sl1_cr" class="pop_check_cr" data-theme="c">
+                        <fieldset data-role="controlgroup">
+                            <legend class="title_cb">one carrot</legend>
+                            <input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" />
+                            <label for="checkbox-1" class="lb_cb_cr">Support player with whole carrot</label>
+                            <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" />
+                            <label for="checkbox-2" class="lb_cb_cr">Offer a cash incentive</label>
+                            <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" />
+                            <label for="checkbox-3" class="lb_cb_cr">Choose your own carrot</label>
+                            <input type="checkbox" name="checkbox-4" id="checkbox-4" class="custom" />
+                            <label for="checkbox-4" class="lb_cb_cr">Offer a priceless incentive</label>
+                            <input type="checkbox" name="checkbox-5" id="checkbox-5" class="custom" />
+                            <label for="checkbox-5" class="lb_cb_cr">Pledge a donation to charity</label>
+                            <div class="pop_ok_cancel" >
+                                <a class="ok_cancel_cr" href="#"  data-inline="true" data-rel="back" data-theme="">Cancel</a>
+                                <a class="ok_cancel_cr" href="#"  data-inline="true" data-rel="back" data-theme="">OK</a>
+                            </div>
+                        </fieldset>
+                        <!--                                <div><a class="cancel_btn">Cancel</a><a class="ok_btn">Ok</a></div>-->
+
+                    </div>
+                    <a class="sl_carrot" href="#pop_sl2_cr" data-rel="popup">two carrots</a>
+                    <div data-role="popup" id="pop_sl2_cr" class="pop_check_cr">
+                        <fieldset data-role="controlgroup">
+                            <legend class="title_cb">two carrots</legend>
+                            <input type="checkbox" name="checkbox-21" id="checkbox-1" class="custom" />
+                            <label for="checkbox-1" class="lb_cb_cr">Support player with whole carrot</label>
+                            <input type="checkbox" name="checkbox-22" id="checkbox-2" class="custom" />
+                            <label for="checkbox-2" class="lb_cb_cr">Offer a cash incentive</label>
+                            <input type="checkbox" name="checkbox-23" id="checkbox-3" class="custom" />
+                            <label for="checkbox-3" class="lb_cb_cr">Choose your own carrot</label>
+                            <input type="checkbox" name="checkbox-24" id="checkbox-4" class="custom" />
+                            <label for="checkbox-4" class="lb_cb_cr">Offer a priceless incentive</label>
+                            <input type="checkbox" name="checkbox-25" id="checkbox-5" class="custom" />
+                            <label for="checkbox-5" class="lb_cb_cr">Pledge a donation to charity</label>
+                            <div class="pop_ok_cancel" >
+                                <a class="ok_cancel_cr" href="#"  data-inline="true" data-rel="back" data-theme="">Cancel</a>
+                                <a class="ok_cancel_cr" href="#"  data-inline="true" data-rel="back" data-theme="">OK</a>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <a class="sl_carrot" href="#pop_sl3_cr" data-rel="popup">three carrots</a>
+                    <div data-role="popup" id="pop_sl3_cr" class="pop_check_cr">
+                        <fieldset data-role="controlgroup">
+                            <legend class="title_cb">three carrots</legend>
+                            <input type="checkbox" name="checkbox-31" id="checkbox-1" class="custom" />
+                            <label for="checkbox-1" class="lb_cb_cr">Support player with whole carrot</label>
+                            <input type="checkbox" name="checkbox-32" id="checkbox-2" class="custom" />
+                            <label for="checkbox-2" class="lb_cb_cr">Offer a cash incentive</label>
+                            <input type="checkbox" name="checkbox-33" id="checkbox-3" class="custom" />
+                            <label for="checkbox-3" class="lb_cb_cr">Choose your own carrot</label>
+                            <input type="checkbox" name="checkbox-34" id="checkbox-4" class="custom" />
+                            <label for="checkbox-4" class="lb_cb_cr">Offer a priceless incentive</label>
+                            <input type="checkbox" name="checkbox-35" id="checkbox-5" class="custom" />
+                            <label for="checkbox-5" class="lb_cb_cr">Pledge a donation to charity</label>
+                            <div class="pop_ok_cancel" >
+                                <a class="ok_cancel_cr" href="#"  data-inline="true" data-rel="back" data-theme="">Cancel</a>
+                                <a class="ok_cancel_cr" href="#"  data-inline="true" data-rel="back" data-theme="">OK</a>
+                            </div>
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="panel" data-position-fixed="false" id="nav-panel">
+        <div class="info">
+            <div class="name">
+                <img src="../images/default.png" />
+                <p>
+                    <span class="name">Do Dang Thanh</span><br />
+                    <span>BCV</span>
+                    <span>Year 12</span>
+                </p>
+            </div>
+            <p>
+                <a class="player button" href="#"></a>
+                <a class="supporter button" href="#"></a>
+            </p>
+        </div>
+        <ul class="category">
+            <li><a href="" onclick="gotoScoreboard();" id="scoreboard">Scoreboard</a></li>
+            <li><a href="#" onclick="goToEditUser();" id="verify">Verify Supporters</a></li>
+            <li><a href="#" onclick="goToEditUser();" id="invite">Invite Supporter</a></li>
+            <li><a href="#" onclick="gotoStep2();" id="play-again">Play Again</a></li>
+            <li><a href="" onclick="goToEditUser();" id="edit-details">Edit Details</a></li>
+            <li><a href="" onclick="gotoStep1();" id="support">Support A Player</a></li>>
+            <li><a href="#" onclick="logout();" id="logout">Log out</a></li>
+        </ul>
+    </div><!-- /panel -->
+</div>
+</body>
+</html>

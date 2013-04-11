@@ -22,7 +22,7 @@ function gotoStep1(){
 }
 
 function gotoStep2(){
-    location.href='../pages/step2.html';
+    location.href='../pages/newstep2.html';
 }
 
 function gotoStep3(){

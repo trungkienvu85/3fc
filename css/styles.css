@@ -181,6 +181,29 @@ form#form_s3 a.sl_carrot {
     margin: 5px;
     font-size: 13px;
 }
+
+form#form_s3 .ip_form {
+    display: block;
+    width: 100%;
+    padding: 2px;
+    border: 1px solid #ddd;
+}
+form#form_s3 .step1_btn_form, form#form_search_stu .step3_btn_from{
+    background: #f47321;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    border: 0;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+form#form_s3 .step3_btn_from{
+    display: inline-block;
+    width: 49.5%;
+}
 .pop_check_cr {
     border-radius: 0 !important;
 }

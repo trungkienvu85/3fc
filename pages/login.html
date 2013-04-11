@@ -13,7 +13,7 @@
     <script src="../js/AppDataContext.js"></script>
     <script src="../js/models/UserModel.js"></script>
     <script src="../js/collections/ApiCollections.js"></script>
-
+    <script src="../js/utils/utils.js"></script>
 </head>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -25,51 +25,81 @@
         console.log("login"+$("#username").val()+$("#password").val());
 
         var user= new User.UserModel({
-            id : "",
-            userName : $("#username").val(),
-            password : $("#password").val(),
-            userType: "",
-            email: "",
-            lisGameId: [],
-            listSupporter:[]
+            "CountryId":'',
+            "CreatedBy":'',
+            "CreatedDate":'',
+            "FirstName":'',
+            "IsActive":'',
+            "IsAdmin":'',
+            "IsInAu":true,
+            "LastName":'',
+            "MiddleName":'',
+            "Photo":'',
+            "PostCode":'',
+            "RelationShip":'',
+            "School":'',
+            "SecretAnswer":'',
+            "SecretQuestion":'',
+            "StateCode":'',
+            "StudentType":'',
+            "SuburbLive":'',
+            "SuburbSchool":'',
+            "UserAge":'',
+            "UserEmail":$("#username").val(),
+            "UserId":'',
+            "UserPassword":$("#password").val(),
+            "UserSex":'',
+            "UserType":'',
+            "YearIn":''
         });
+        checkValidateUserLogin(user,function(err){
+            if(err==''){
+                loginUser(user,function(user,err){
 
-        loginUser(user,function(user,err){
+                    if(err==null){
 
-            if(err==null){
+                        console.log('callback:'+user.UserId+'-'+user.gameIds);
+                        window.localStorage["UID"] = user.UserId;
+                        if(user.UserId=='0'){
+                            alert('Error login!');
+                        }else{
+                            if(user.UserType=='1'||user.UserType=='3'){
 
-                if(user.userType=='1'||user.userType=='3'){
+                                if(user.gameIds!=null){
 
-                    if(user.lisGameId.length>0){
+                                    location.href= "scoreboard.html";
 
-                        location.href= "scoreboard.html";
+                                }else{
+
+                                    location.href= "newstep2.html";
+                                }
+
+                            }else{
+
+//                        if(user.lisGameSupportedId.length>0){
+//
+//                            location.href= "scoreboard.html";
+//
+//                        }else{
+//
+//                            location.href= "step2.html";
+//
+//                        }
+                            }
+                        }
 
                     }else{
 
-                        location.href= "step2.html";
-                    }
-
-                }else{
-
-                    if(user.lisGameSupportedId.length>0){
-
-                        location.href= "scoreboard.html";
-
-                    }else{
-
-                        location.href= "step2.html";
+                        alert(err);
 
                     }
-                }
+
+                });
 
             }else{
-
                 alert(err);
-
             }
-
-        });
-
+        })
     }
 
 </script>

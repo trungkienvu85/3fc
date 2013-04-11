@@ -1,0 +1,561 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Support a player</title>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="../css/mystyle.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.3.0.min.css" />
+        <script src="../js/jquery-1.9.1.min.js"></script>
+        <script src="../js/jquery.mobile-1.3.0.min.js"></script>
+        <script src="../js/pages/menu.js"></script>
+        <script src="../js/AppDataContext.js"></script>
+        <script src="../js/models/GameModel.js"></script>
+        <script src="../js/models/UserModel.js"></script>
+        <script src="../js/collections/ApiCollections.js"></script>
+        <script src="../js/utils/utils.js"></script>
+    </head>
+    <body>
+        <div id="page" data-role="page">
+            <div id="header" data-role="header" data-theme="">
+                <div id="header_top">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="left_top" style="width: 20%;"><a href="#nav-panel" data-theme="" data-icon=""><span style='display:block;height:0;overflow:hidden;position:absolute;width:0'>Click</span></a></td>
+                                <td class="center_top" style="width: 60%;text-align: center;"><h3 class="logo_text">Support a player</h3></td>
+                                <td class="right_top" style="width: 20%;"></td>
+                            </tr>
+                        </tbody>
+                    </table>				
+                </div>
+                <div id="header_bottom">
+                    <p style="float:left; margin: 0; color: #fff; line-height: 190%;">Do Dang Thanh</p>
+                    <p style="float:right; margin: 0; color: #fff; line-height: 190%;">24/02/2013</p>
+                </div>
+            </div>
+            <div id="container" data-role="content" data-theme="">
+                <div class="step_bar">
+                    <p>Step 2</p>&nbsp;<span>Your details</span>
+                </div>
+                <div class="proccess_bar" style="background: #ececec;height:7px;width: 100%;">
+                    <hr style="width: 40%;" />
+                </div>
+                <div style="padding: 0 10px;text-align: left;">
+                    <p style="margin: 5px 0;"><span><b>Support a Student</b></span></p>
+                    <p style="font-family: Arial;font-size: 10px;margin: 5px 0;text-align: justify;">
+                        <span style="display: block;">
+                            Before you can support a player we need to know a little about you.
+                            It is the policy of Three Fat Carrots that every supporter must be verified by the player before registration can be completed.
+                            Once you have been verified you will be invited to complete your support for the student.
+                        </span>
+                    </p>
+                </div>
+                <div class="support_step">
+                    <p>Enter your details below</p>
+                    <form id="form_search_stu" action method="post">
+                        <label class="step2_lb">First name:</label>
+                        <input class="ip_form" type="text" data-role="none" />
+                        <label class="step2_lb">Age</label>
+                        <select data-role="none" style="width: 100%;padding: 2px; border: 1px solid #ddd;">
+                            <option value="">Select your age</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                        </select>
+<!--                        <input class="ip_form" type="text" data-role="none" />-->
+                        <label class="step2_lb">Country you live in:</label>
+                        <div style="text-align: center;">
+                            <label class="r_ip" style="padding: 0">
+                                <input type="radio" name="r_ctry" data-role="none" />
+                                <span style="vertical-align: top; padding-top: 5px;display: inline-block">Within Australia</span>
+                            </label>
+                            <label class="r_ip" style="padding: 0">
+                                <input type="radio" name="r_ctry" data-role="none" />
+                                <span style="vertical-align: top; padding-top: 5px;display: inline-block">Outside Australia</span>
+                            </label>
+                        </div>
+                        <label class="step2_lb">Your country:</label>
+                        <select id='selectCountry' data-role="none" style="width: 100%;padding: 2px; border: 1px solid #ddd;">
+                            <option value="">Please select your state:</option>
+                    		<option value="11">Afghanistan</option>
+                    		<option value="12">Albania</option>
+                    		<option value="13">Algeria</option>
+                    		<option value="14">American Samoa</option>
+                    		<option value="15">Andorra</option>
+                    		<option value="16">Angola</option>
+                    		<option value="17">Anguilla</option>
+                    		<option value="18">Antarctica</option>
+                    		<option value="19">Antigua and Barbuda</option>
+                    		<option value="20">Argentina</option>
+                    		<option value="21">Armenia</option>
+                    		<option value="22">Aruba</option>
+                    		<option value="23">Australia</option>
+                    		<option value="24">Austria</option>
+                    		<option value="25">Azerbaijan</option>
+                    		<option value="26">Bahamas</option>
+                    		<option value="27">Bahrain</option>
+                    		<option value="28">Bangladesh</option>
+                    		<option value="29">Barbados</option>
+                    		<option value="30">Belarus</option>
+                    		<option value="31">Belgium</option>
+                    		<option value="32">Belize</option>
+                    		<option value="33">Benin</option>
+                    		<option value="34">Bermuda</option>
+                    		<option value="35">Bhutan</option>
+                    		<option value="36">Bolivia</option>
+                    		<option value="37">Bosnia-Herzegovina</option>
+                    		<option value="38">Botswana</option>
+                    		<option value="39">Bouvet Island</option>
+                    		<option value="40">Brazil</option>
+                    		<option value="41">British Indian Ocean Territory</option>
+                    		<option value="42">Brunei Darussalam</option>
+                    		<option value="43">Bulgaria</option>
+                    		<option value="44">Burkina Faso</option>
+                    		<option value="45">Burundi</option>
+                    		<option value="46">Cambodia</option>
+                    		<option value="47">Cameroon</option>
+                    		<option value="48">Canada</option>
+                    		<option value="49">Cape Verde</option>
+                    		<option value="50">Cayman Islands</option>
+                    		<option value="51">Central African Republic</option>
+                    		<option value="52">Chad</option>
+                    		<option value="53">Chile</option>
+                    		<option value="54">China</option>
+                    		<option value="55">Christmas Island</option>
+                    		<option value="56">Cocos (Keeling) Islands</option>
+                    		<option value="57">Colombia</option>
+                    		<option value="58">Comoros</option>
+                    		<option value="59">Congo</option>
+                    		<option value="60">Congo, Dem. Republic</option>
+                    		<option value="61">Cook Islands</option>
+                    		<option value="62">Costa Rica</option>
+                    		<option value="63">Croatia</option>
+                    		<option value="64">Cuba</option>
+                    		<option value="65">Cyprus</option>
+                    		<option value="66">Czech Rep.</option>
+                    		<option value="67">Denmark</option>
+                    		<option value="68">Djibouti</option>
+                    		<option value="69">Dominica</option>
+                    		<option value="70">Dominican Republic</option>
+                    		<option value="71">Ecuador</option>
+                    		<option value="72">Egypt</option>
+                    		<option value="73">El Salvador</option>
+                    		<option value="74">Equatorial Guinea</option>
+                    		<option value="75">Eritrea</option>
+                    		<option value="76">Estonia</option>
+                    		<option value="77">Ethiopia</option>
+                    		<option value="78">European Union</option>
+                    		<option value="79">Falkland Islands</option>
+                    		<option value="80">Faroe Islands</option>
+                    		<option value="81">Fiji</option>
+                    		<option value="82">Finland</option>
+                    		<option value="83">France</option>
+                    		<option value="84">French Guiana</option>
+                    		<option value="85">French Southern Territories</option>
+                    		<option value="86">Gabon</option>
+                    		<option value="87">Gambia</option>
+                    		<option value="88">Georgia</option>
+                    		<option value="89">Germany</option>
+                    		<option value="90">Ghana</option>
+                    		<option value="91">Gibraltar</option>
+                    		<option value="92">Great Britain</option>
+                    		<option value="93">Greece</option>
+                    		<option value="94">Greenland</option>
+                    		<option value="95">Grenada</option>
+                    		<option value="96">Guadeloupe (French)</option>
+                    		<option value="97">Guam (USA)</option>
+                    		<option value="98">Guatemala</option>
+                    		<option value="99">Guernsey</option>
+                    		<option value="100">Guinea</option>
+                    		<option value="101">Guinea Bissau</option>
+                    		<option value="102">Guyana</option>
+                    		<option value="103">Haiti</option>
+                    		<option value="104">Heard Island and McDonald Islands</option>
+                    		<option value="105">Honduras</option>
+                    		<option value="106">Hong Kong</option>
+                    		<option value="107">Hungary</option>
+                    		<option value="108">Iceland</option>
+                    		<option value="109">India</option>
+                    		<option value="110">Indonesia</option>
+                    		<option value="111">Iran</option>
+                    		<option value="112">Iraq</option>
+                    		<option value="113">Ireland</option>
+                    		<option value="114">Isle of Man</option>
+                    		<option value="115">Israel</option>
+                    		<option value="116">Italy</option>
+                    		<option value="117">Ivory Coast</option>
+                    		<option value="118">Jamaica</option>
+                    		<option value="119">Japan</option>
+                    		<option value="120">Jersey</option>
+                    		<option value="121">Jordan</option>
+                    		<option value="122">Kazakhstan</option>
+                    		<option value="123">Kenya</option>
+                    		<option value="124">Kiribati</option>
+                    		<option value="125">Korea-North</option>
+                    		<option value="126">Korea-South</option>
+                    		<option value="127">Kuwait</option>
+                    		<option value="128">Kyrgyzstan</option>
+                    		<option value="129">Laos</option>
+                    		<option value="130">Latvia</option>
+                    		<option value="131">Lebanon</option>
+                    		<option value="132">Lesotho</option>
+                    		<option value="133">Liberia</option>
+                    		<option value="134">Libya</option>
+                    		<option value="135">Liechtenstein</option>
+                    		<option value="136">Lithuania</option>
+                    		<option value="137">Luxembourg</option>
+                    		<option value="138">Macau</option>
+                    		<option value="139">Macedonia</option>
+                    		<option value="140">Madagascar</option>
+                    		<option value="141">Malawi</option>
+                    		<option value="142">Malaysia</option>
+                    		<option value="143">Maldives</option>
+                    		<option value="144">Mali</option>
+                    		<option value="145">Malta</option>
+                    		<option value="146">Marshall Islands</option>
+                    		<option value="147">Martinique (French)</option>
+                    		<option value="148">Mauritania</option>
+                    		<option value="149">Mauritius</option>
+                    		<option value="150">Mayotte</option>
+                    		<option value="151">Mexico</option>
+                    		<option value="152">Micronesia</option>
+                    		<option value="153">Moldova</option>
+                    		<option value="154">Monaco</option>
+                    		<option value="155">Mongolia</option>
+                    		<option value="156">Montenegro</option>
+                    		<option value="157">Montserrat</option>
+                    		<option value="158">Morocco</option>
+                    		<option value="159">Mozambique</option>
+                    		<option value="160">Myanmar</option>
+                    		<option value="161">Namibia</option>
+                    		<option value="162">Nauru</option>
+                    		<option value="163">Nepal</option>
+                    		<option value="164">Netherlands</option>
+                    		<option value="165">Netherlands Antilles</option>
+                    		<option value="166">New Caledonia (French)</option>
+                    		<option value="167">New Zealand</option>
+                    		<option value="168">Nicaragua</option>
+                    		<option value="169">Niger</option>
+                    		<option value="170">Nigeria</option>
+                    		<option value="171">Niue</option>
+                    		<option value="172">Norfolk Island</option>
+                    		<option value="173">Northern Mariana Islands</option>
+                    		<option value="174">Norway</option>
+                    		<option value="175">Oman</option>
+                    		<option value="176">Pakistan</option>
+                    		<option value="177">Palau</option>
+                    		<option value="178">Panama</option>
+                    		<option value="179">Papua New Guinea</option>
+                    		<option value="180">Paraguay</option>
+                    		<option value="181">Peru</option>
+                    		<option value="182">Philippines</option>
+                    		<option value="183">Pitcairn Island</option>
+                    		<option value="184">Poland</option>
+                    		<option value="185">Polynesia (French)</option>
+                    		<option value="186">Portugal</option>
+                    		<option value="187">Puerto Rico</option>
+                    		<option value="188">Qatar</option>
+                    		<option value="189">Reunion (French)</option>
+                    		<option value="190">Romania</option>
+                    		<option value="191">Russia</option>
+                    		<option value="192">Rwanda</option>
+                    		<option value="193">Saint Helena</option>
+                    		<option value="194">Saint Kitts &amp; Nevis Anguilla</option>
+                    		<option value="195">Saint Lucia</option>
+                    		<option value="196">Saint Pierre and Miquelon</option>
+                    		<option value="197">Saint Vincent &amp; Grenadines</option>
+                    		<option value="198">Samoa</option>
+                    		<option value="199">San Marino</option>
+                    		<option value="200">Sao Tome and Principe</option>
+                    		<option value="201">Saudi Arabia</option>
+                    		<option value="202">Senegal</option>
+                    		<option value="203">Serbia</option>
+                    		<option value="204">Seychelles</option>
+                    		<option value="205">Sierra Leone</option>
+                    		<option value="206">Singapore</option>
+                    		<option value="207">Slovakia</option>
+                    		<option value="208">Slovenia</option>
+                    		<option value="209">Solomon Islands</option>
+                    		<option value="210">Somalia</option>
+                    		<option value="211">South Africa</option>
+                    		<option value="212">South Georgia &amp; South Sandwich Islands</option>
+                    		<option value="213">South Sudan</option>
+                    		<option value="214">Spain</option>
+                    		<option value="215">Sri Lanka</option>
+                    		<option value="216">Sudan</option>
+                    		<option value="217">Suriname</option>
+                    		<option value="218">Svalbard and Jan Mayen Islands</option>
+                    		<option value="219">Swaziland</option>
+                    		<option value="220">Sweden</option>
+                    		<option value="221">Switzerland</option>
+                    		<option value="222">Syria</option>
+                    		<option value="223">Taiwan</option>
+                    		<option value="224">Tajikistan</option>
+                    		<option value="225">Tanzania</option>
+                    		<option value="226">Thailand</option>
+                    		<option value="227">Togo</option>
+                    		<option value="228">Tokelau</option>
+                    		<option value="229">Tonga</option>
+                    		<option value="230">Trinidad and Tobago</option>
+                    		<option value="231">Tunisia</option>
+                    		<option value="232">Turkey</option>
+                    		<option value="233">Turkmenistan</option>
+                    		<option value="234">Turks and Caicos Islands</option>
+                    		<option value="235">Tuvalu</option>
+                    		<option value="236">U.K.</option>
+                    		<option value="237">Uganda</option>
+                    		<option value="238">Ukraine</option>
+                    		<option value="239">United Arab Emirates</option>
+                    		<option value="240">Uruguay</option>
+                    		<option value="241">USA</option>
+                    		<option value="242">USA Minor Outlying Islands</option>
+                    		<option value="243">Uzbekistan</option>
+                    		<option value="244">Vanuatu</option>
+                    		<option value="245">Vatican</option>
+                    		<option value="246">Venezuela</option>
+                    		<option value="247">Vietnam</option>
+                    		<option value="248">Virgin Islands (British)</option>
+                    		<option value="249">Virgin Islands (USA)</option>
+                    		<option value="250">Wallis and Futuna Islands</option>
+                    		<option value="251">Western Sahara</option>
+                    		<option value="252">Yemen</option>
+                    		<option value="253">Zambia</option>
+                    		<option value="254">Zimbabwe</option>
+
+                        </select>
+                        <label class="step2_lb">Your school:</label>
+                        <input class="ip_form" id='userSchool' type="text" data-role="none" />
+                        
+                        <label class="step2_lb">What type of goal are you working towards?</label>
+                        <select data-role="none" id="goal" style="width: 100%;padding: 2px; border: 1px solid #ddd;">
+                            <option value="">Please select type of goal are you working towards</option>
+                        	<option value="atar">ATAR</option>
+                        	<option value="op">OP</option>
+                        	<option value="ibdp">IBDP</option>
+                        	<option value="subject">Subject</option>
+                        	<option value="learning">Learning goals</option>
+                        	<option value="sport">Sport goals</option>
+
+                        </select>
+                        
+                        <!-- value atar -->
+                        <div id="atar" class="sub-goal hidden">
+                            <span data-role="none">Australian Tertiary Admission Rank. Valid for all Australian states, except Queensland.</span>
+                            <label data-role="none" class="step2_lb">Set your target score between 30 and 99.95</label>
+                            <input class="ip_form" id='' type="text" data-role="none" />
+                        </div>
+                        <!-- value op -->
+                        <div id="op" class="sub-goal hidden">
+                            <span data-role="none">For students in Queensland studying for the Overall Position.</span>
+                            <label data-role="none" class="step2_lb">Set your target score between 1 and 25</label>
+                            <input class="ip_form" type="text" data-role="none" />
+                        </div>
+                        <!-- value ibdp -->
+                        <div id="ibdp" class="sub-goal hidden">
+                            <span data-role="none">Choose this option if you are studying for any other type of exam which scores between 1 and 45</span>
+                            <label data-role="none" class="step2_lb">Set your target score between 1 and 45</label>
+                            <input class="ip_form" type="text" data-role="none" />
+                        </div>
+                        <!-- value subject -->
+                        <div id="subject" class="sub-goal hidden">
+                            <span data-role="none">Choose this option if you are studying for any other type of subject which scores between 1 and 100</span>
+                            <select data-role="none" style="width: 100%;padding: 2px; border: 1px solid #ddd;">
+                                <option value="71">English</option>
+                            	<option value="72">Maths</option>
+                            	<option value="73">Biology</option>
+                            	<option value="74">Chemistry</option>
+                            	<option value="75">Physics</option>
+                            	<option value="76">Science</option>
+                            	<option value="77">History</option>
+                            	<option value="78">Business</option>
+                            	<option value="79">Economics</option>
+                            	<option value="80">Geography</option>
+                            	<option value="81">Legal </option>
+                            	<option value="82">Religion</option>
+                            	<option value="83">Dance</option>
+                            	<option value="84">Drama</option>
+                            	<option value="85">Music </option>
+                            	<option value="86">Art</option>
+                            	<option value="87">Food Tech</option>
+                            	<option value="88">French</option>
+                            	<option value="89">Italian</option>
+                            	<option value="90">Chinese</option>
+                            	<option value="91">Japanese</option>
+                            	<option value="92">Greek</option>
+                            	<option value="93">Automotive</option>
+                            	<option value="94">Hospitality</option>
+                            	<option value="95">IT</option>
+                            	<option value="96">Tourism </option>
+                            	<option value="97">Accounting</option>
+                            </select>
+                            <label data-role="none" class="step2_lb">Detailed description of goal (optional). For example, half-yearly Maths test or Art assignment.</label>
+                            <textarea data-role="none" class="ip_form"></textarea>
+                            <label data-role="none" class="step2_lb">Set your target score between 1 and 100</label>
+                            <input class="ip_form" type="text" data-role="none" />
+                        </div>
+                        <!-- value learning -->
+                        <div id="learning" class="sub-goal hidden">
+                            <span data-role="none">If your goal is non-specific, for example read five books in two weeks, you should play with One result, one reward and choose 100% as your target. Your completion date and results released date will likely be the same in this instance.</span>
+                            <label data-role="none" class="step2_lb">Name</label>
+                            <input class="ip_form" type="text" data-role="none" />
+                            <label data-role="none" class="step2_lb">Detailed description of goal (optional). For example, half-yearly Maths test or Art assignment.</label>
+                            <textarea data-role="none" class="ip_form"></textarea>
+                            <label data-role="none" class="step2_lb">Set your target score between 1 and 100</label>
+                            <input class="ip_form" type="text" data-role="none" />
+                        </div>
+                        <!-- value sport -->
+                        <div id="sport" class="sub-goal hidden">
+                            <span data-role="none">If your goal is non-specific, for example read five books in two weeks, you should play with One result, one reward and choose 100% as your target. Your completion date and results released date will likely be the same in this instance.</span>
+                            <label data-role="none" class="step2_lb">Name</label>
+                            <input class="ip_form" type="text" data-role="none" />
+                            <label data-role="none" class="step2_lb">Detailed description of goal (optional). For example, half-yearly Maths test or Art assignment.</label>
+                            <textarea data-role="none" class="ip_form"></textarea>
+                            <label data-role="none" class="step2_lb">Set your target score between 1 and 100</label>
+                            <input class="ip_form" type="text" data-role="none" />
+                        </div>
+                        
+                        <label data-role="none" class="step2_lb">Fill in dates later</label>
+                        <input type="checkbox" class="ip_form check-fill-date" name="r_ctry" data-role="none" style="width: auto;;" />
+                        <div class="fill-date hidden">
+                            <label data-role="none" class="step2_lb">Expected date of completion</label>
+                            <input class="ip_form" type="text" data-role="none" />
+                            <label data-role="none" class="step2_lb">When will your results be available or your goal achieved?</label>
+                            <input class="ip_form" type="text" data-role="none" />
+                        </div>
+
+
+                        <input class="step2_btn_from ip_form" onclick="preview();" value="Preview" data-role="none"/>
+                        <input class="step2_btn_from ip_form" onclick="verify();"  value="Verify" data-role="none"/>
+                    </form>
+                </div>
+            </div>
+
+            <div data-role="panel" data-position-fixed="false" id="nav-panel">
+                <div class="info">
+                    <div class="name">
+                        <img src="../images/default.png" />
+                        <p>
+                            <span class="name">Do Dang Thanh</span><br />
+                            <span>BCV</span>
+                            <span>Year 12</span>
+                        </p>
+                    </div>
+                    <p>
+                        <a class="player button" href="#"></a>
+                        <a class="supporter button" href="#"></a>
+                    </p>
+                </div>
+                <ul class="category">
+                    <li><a href="" onclick="gotoScoreboard();" id="scoreboard">Scoreboard</a></li>
+                    <li><a href="#" onclick="goToEditUser();" id="verify">Verify Supporters</a></li>
+                    <li><a href="#" onclick="goToEditUser();" id="invite">Invite Supporter</a></li>
+                    <li><a href="#" onclick="gotoStep2();" id="play-again">Play Again</a></li>
+                    <li><a href="" onclick="goToEditUser();" id="edit-details">Edit Details</a></li>
+                    <li><a href="" onclick="gotoStep1();" id="support">Support A Player</a></li>>
+                    <li><a href="#" onclick="logout();" id="logout">Log out</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+    var userModel;
+    $(document).ready(function() {
+        $('#goal').change(function() {
+            if($(this).val() != '') {
+                $('.sub-goal').hide();
+                var value = $(this).val();
+                $('#'+value).show('slow');
+            } else {
+                $('.sub-goal').hide('slow');
+            }
+        });
+        // check fill date
+        $('.check-fill-date').change(function() {
+            if($(this).is(':checked')) {
+                $('.fill-date').show('slow');
+            } else {
+                $('.fill-date').hide('slow');
+            }
+        });
+
+        var userId= window.localStorage["UID"];
+
+        getUserbyUserId(userId,function(userData){
+            userModel= new User.UserModel({
+                "CountryId":userData.CountryId,
+                "CreatedBy":userData.CreatedBy,
+                "CreatedDate":userData.CreatedDate,
+                "FirstName":userData.FirstName,
+                "IsActive":userData.IsActive,
+                "IsAdmin":userData.IsAdmin,
+                "IsInAu":userData.IsInAu,
+                "LastName":userData.LastName,
+                "MiddleName":userData.MiddleName,
+                "Photo":userData.Photo,
+                "PostCode":userData.PostCode,
+                "RelationShip":userData.RelationShip,
+                "School":userData.School,
+                "SecretAnswer":userData.SecretAnswer,
+                "SecretQuestion":userData.SecretQuestion,
+                "StateCode":userData.StateCode,
+                "StudentType":userData.StudentType,
+                "SuburbLive":userData.SuburbLive,
+                "SuburbSchool":userData.SuburbSchool,
+                "UserAge":userData.UserAge,
+                "UserEmail":userData.UserEmail,
+                "UserId":userData.UserId,
+                "UserPassword":userData.UserPassword,
+                "UserSex":userData.UserSex,
+                "UserType":userData.UserType,
+                "YearIn":userData.YearIn
+            });
+
+        });
+        fillUserInfo(userModel,function(){
+
+        });
+    });
+    function verify(){
+
+       var gameModel= new Game.GameModel({
+           "ActiveResult":'',
+           "AvailableDate":'',
+           "Comments":'',
+           "ExpectedDate":'',
+           "GameId":'',
+           "GameResult":'',
+           "GameStatus":'',
+           "IsLatedDate":'',
+           "PostResultDate":'',
+           "RewardType":'1',
+           "StudyDescription":'',
+           "StudyName":'',
+           "StudyforValue":'',
+           "SubjectCode":'',
+           "VerifierEmail":'',
+           "VerifierFirstName":'',
+           "VerifierLastName":''
+        });
+        checkValidateCreatePlayerGameStep2(userModel,gameModel,function(err){
+            console.log('checkValidateCreatePlayerGameStep2 callback');
+            createPlayergameStep2(gameModel,function(err){
+
+            });
+        });
+
+    }
+    function preview(){
+        history.back();
+    }
+
+    function fillUserInfo(userModel,callback){
+        $("select#selectCountry option")
+                .each(function() { this.selected = (this.value == userModel.CountryId); });
+        $('#userSchool').val(userModel.School);
+        callback();
+    }
+    </script>
+</html>

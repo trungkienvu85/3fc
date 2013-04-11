@@ -8,6 +8,9 @@
         <script src="../js/jquery-1.9.1.min.js"></script>
         <script src="../js/jquery.mobile-1.3.0.min.js"></script>
         <script src="../js/pages/menu.js"></script>
+        <script src="../js/AppDataContext.js"></script>
+        <script src="../js/models/GameModel.js"></script>
+        <script src="../js/collections/ApiCollections.js"></script>
     </head>
     <body>
         <div id="page" data-role="page">
@@ -71,8 +74,8 @@
                                 <span style="vertical-align: top; padding-top: 5px;display: inline-block">Outside Australia</span>
                             </label>
                         </div>
-                        <input class="step2_btn_from ip_form" type="submit" value="Preview" data-role="none"/>
-                        <input class="step2_btn_from ip_form" type="submit" value="Verify" data-role="none"/>
+                        <input class="step2_btn_from ip_form" onclick="preview();" value="Preview" data-role="none"/>
+                        <input class="step2_btn_from ip_form" onclick="verify();"  value="Verify" data-role="none"/>
                     </form>
                 </div>
             </div>
@@ -104,4 +107,35 @@
             </div><!-- /panel -->
         </div>
     </body>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            loadState(function(data){
+
+            });
+        });
+
+        function verify(){
+            console.log('verify');
+            var playerStep2Model= new Game.PlayerGameStep2Model({
+                playerId : '',
+                playerLocation: '',
+                playerCountry: '',
+                playerSchool: '',
+                playerTypeOfGoal: '',
+                playerTargetScore: '',
+                playerExpectedDate: '',
+                playerResultDate: '',
+                playerGameType: ''
+            });
+            createPlayergameStep2(playerStep2Model,function(data){
+                console.log(data.playerId);
+                location.href='step3.html';
+            })
+        }
+        function preview(){
+             history.back();
+        }
+
+    </script>
 </html>

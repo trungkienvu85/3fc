@@ -172,3 +172,6 @@ div.value {
     height: 115px;
     line-height: 100px;
 }
+.hidden {
+    display: none;
+}

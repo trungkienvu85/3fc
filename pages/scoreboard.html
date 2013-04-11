@@ -11,6 +11,7 @@
         <script src="../js/AppDataContext.js"></script>
         <script src="../js/models/UserModel.js"></script>
         <script src="../js/pages/menu.js"></script>
+        <script src="../js/collections/ApiCollections.js"></script>
 
     </head>
     <body>
@@ -126,9 +127,18 @@
             </div><!-- /panel -->
         </div>
         <script type="text/javascript">
-            $(document).ready(function() {
 
-                console.log("ready");
+            $(document).ready(function() {
+                var userId= window.localStorage["UID"];
+                getGames(userId ,function(data){
+                    console.log('data:'+data);
+                    var array = JSON.parse(data);
+                    for(var i=0; i<array.length;i++){
+                        getRewardByGame(userId,array[i].GameId,array[i].RewardType,function(detailGameData){
+                            console.log('Reward:'+detailGameData);
+                        })
+                    }
+                })
             });
 
         </script>
